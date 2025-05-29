@@ -1,236 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Aspen Montessori School</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Aspen Montessori School</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-    }
 
-    /* Sidebar */
-    .sidebar {
-      background-color: #2c3e50;
-      color: white;
-      width: 220px;
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      padding-top: 20px;
-      position: fixed;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
+    
+    <!-- Bootstrap core CSS -->
+<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .sidebar a {
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      display: block;
-    }
-
-    .sidebar a:hover {
-      background-color: #34495e;
-    }
-
-    .content {
-      margin-left: 220px;
-      padding: 20px;
-      flex-grow: 1;
-      transition: margin-left 0.3s ease;
-    }
-
-    .carousel {
-      position: relative;
-      max-width: 600px;
-      margin: 30px auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .slide {
-      min-width: 100%;
-    }
-
-    .slide img {
-      width: 100%;
-      display: block;
-    }
-
-    .carousel-buttons {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .carousel-buttons button {
-      padding: 5px 10px;
-      margin: 0 5px;
-      border: none;
-      border-radius: 5px;
-      background-color: #2c3e50;
-      color: white;
-      cursor: pointer;
-    }
-
-    .carousel-buttons button:hover {
-      background-color: #34495e;
-    }
-
-    /* Hamburger menu */
-    .hamburger {
-      display: none;
-      background-color: #2c3e50;
-      color: white;
-      padding: 15px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      .sidebar {
-        transform: translateX(-100%);
-        position: absolute;
-        z-index: 1000;
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
       }
 
-      .sidebar.open {
-        transform: translateX(0);
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
       }
+    </style>
 
-      .content {
-        margin-left: 0;
-      }
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Aspen Montessori School</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Meet our teachers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-      .hamburger {
-        display: block;
-      }
-    }
-  </style>
-</head>
-<body>
+<main>
 
-  <div class="hamburger" onclick="toggleSidebar()">☰ Menu</div>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
-  <div class="sidebar" id="sidebar">
-    <h2>Aspen Montessori</h2>
-    <a href="#" onclick="loadContent('home')">Home</a>
-    <a href="#" onclick="loadContent('teachers')">Teachers</a>
-    <a href="#" onclick="loadContent('contact')">Contact Us</a>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
-  <div class="content" id="main-content">
-    <!-- Dynamic content will be loaded here -->
-  </div>
 
-  <script>
-    // Sidebar toggle for mobile
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-    }
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    // Load dynamic content
-    function loadContent(page) {
-      const content = document.getElementById('main-content');
-      if (page === 'home') {
-        content.innerHTML = `
-          <div class="programs">
-            <h1>Our Programs</h1>
-            <p>At Aspen Montessori School, we focus on holistic child development. Our current programs include:</p>
-            <ul>
-              <li>Practical Life Activities</li>
-              <li>Sensorial Development</li>
-              <li>Math and Language Exploration</li>
-              <li>Outdoor Nature-Based Learning</li>
-              <li>Social-Emotional Growth Activities</li>
-            </ul>
-          </div>
+  <div class="container marketing">
 
-          <div class="carousel">
-            <div class="slides" id="slides">
-              <div class="slide"><img src="https://via.placeholder.com/600x300?text=Classroom+1" alt="Classroom 1"></div>
-              <div class="slide"><img src="https://via.placeholder.com/600x300?text=Playground" alt="Playground"></div>
-              <div class="slide"><img src="https://via.placeholder.com/600x300?text=Montessori+Materials" alt="Materials"></div>
-            </div>
-            <div class="carousel-buttons">
-              <button onclick="prevSlide()">Prev</button>
-              <button onclick="nextSlide()">Next</button>
-            </div>
-          </div>
-        `;
-        setTimeout(initCarousel, 100); // Initialize carousel after content loads
-      }
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
-      if (page === 'teachers') {
-        content.innerHTML = `
-          <h1>Meet Our Teachers</h1>
-          <p>Our dedicated and certified Montessori educators bring years of experience, patience, and joy to every classroom.</p>
-          <ul>
-            <li><strong>Ms. Jane Doe</strong> - Lead Montessori Guide</li>
-            <li><strong>Mr. John Smith</strong> - Assistant Teacher & Outdoor Education</li>
-            <li><strong>Ms. Lily Green</strong> - Early Childhood Specialist</li>
-          </ul>
-        `;
-      }
+        <h2>Heading</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
-      if (page === 'contact') {
-        content.innerHTML = `
-          <h1>Contact Us</h1>
-          <p>We’d love to hear from you! You can reach us at:</p>
-          <ul>
-            <li>Email: info@aspenmontessori.com</li>
-            <li>Phone: (555) 123-4567</li>
-            <li>Address: 123 Learning Lane, Bothell, WA</li>
-          </ul>
-        `;
-      }
+        <h2>Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
-      // Close sidebar on mobile after click
-      document.getElementById('sidebar').classList.remove('open');
-    }
+        <h2>Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
 
-    // Carousel logic
-    let slideIndex = 0;
-    function showSlide(i) {
-      const slides = document.getElementById('slides');
-      const totalSlides = slides.children.length;
-      slideIndex = (i + totalSlides) % totalSlides;
-      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-    }
 
-    function nextSlide() {
-      showSlide(slideIndex + 1);
-    }
+    <!-- START THE FEATURETTES -->
 
-    function prevSlide() {
-      showSlide(slideIndex - 1);
-    }
+    <hr class="featurette-divider">
 
-    function initCarousel() {
-      showSlide(slideIndex);
-      setInterval(() => nextSlide(), 5000);
-    }
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
 
-    // Load default (home) content
-    loadContent('home');
-  </script>
-</body>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
 </html>
-
