@@ -3,207 +3,366 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Aspen Montessori School | Bothell </title>
-    
-    <!-- Bootstrap core CSS -->
-<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Aspen Montessori School — A nurturing Montessori daycare in Bothell &amp; Kenmore, WA for children ages 12 months to 5 years.">
+    <title>Aspen Montessori School | Bothell &amp; Kenmore, WA</title>
+
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+      :root {
+        --aspen-green: #2D5A3A;
+        --aspen-green-dark: #1e3f28;
+        --aspen-green-light: #eef4f0;
+        --aspen-yellow: #E8A838;
+        --aspen-yellow-dark: #c48a20;
       }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
+      body {
+        padding-top: 72px;
+        color: #333;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+      }
+
+      /* ── Navbar ── */
+      .navbar {
+        background-color: var(--aspen-green) !important;
+      }
+      .navbar-brand img {
+        height: 40px;
+        width: auto;
+        margin-right: 8px;
+      }
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #fff !important;
+      }
+      .nav-link {
+        color: rgba(255,255,255,.85) !important;
+        font-weight: 500;
+      }
+      .nav-link:hover, .nav-link.active {
+        color: var(--aspen-yellow) !important;
+      }
+
+      /* ── Hero ── */
+      #hero {
+        background: linear-gradient(135deg, var(--aspen-green-dark) 0%, var(--aspen-green) 60%, #3d7a50 100%);
+        color: #fff;
+        padding: 100px 0 80px;
+        text-align: center;
+      }
+      #hero h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        line-height: 1.15;
+      }
+      #hero h1 span {
+        color: var(--aspen-yellow);
+      }
+      #hero p.lead {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin: 1.25rem auto 2rem;
+        opacity: .9;
+      }
+      .btn-aspen {
+        background-color: var(--aspen-yellow);
+        border-color: var(--aspen-yellow);
+        color: #1a1a1a;
+        font-weight: 700;
+        padding: .75rem 2rem;
+        border-radius: 50px;
+        font-size: 1.05rem;
+        transition: background-color .2s, transform .15s;
+      }
+      .btn-aspen:hover {
+        background-color: var(--aspen-yellow-dark);
+        border-color: var(--aspen-yellow-dark);
+        color: #1a1a1a;
+        transform: translateY(-2px);
+      }
+      .btn-outline-aspen {
+        border: 2px solid #fff;
+        color: #fff;
+        font-weight: 600;
+        padding: .75rem 2rem;
+        border-radius: 50px;
+        font-size: 1.05rem;
+        background: transparent;
+        transition: background-color .2s;
+      }
+      .btn-outline-aspen:hover {
+        background-color: rgba(255,255,255,.15);
+        color: #fff;
+      }
+
+      /* ── Section shared ── */
+      section {
+        padding: 80px 0;
+      }
+      .section-title {
+        font-weight: 700;
+        color: var(--aspen-green-dark);
+        margin-bottom: .5rem;
+      }
+      .section-divider {
+        width: 60px;
+        height: 4px;
+        background: var(--aspen-yellow);
+        border: none;
+        margin: 0 auto 2.5rem;
+        border-radius: 2px;
+      }
+
+      /* ── About ── */
+      #about {
+        background-color: var(--aspen-green-light);
+      }
+      #about .about-icon {
+        font-size: 2.5rem;
+        margin-bottom: .75rem;
+      }
+      #about .value-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2rem 1.5rem;
+        height: 100%;
+        border-top: 4px solid var(--aspen-green);
+        box-shadow: 0 2px 12px rgba(0,0,0,.07);
+      }
+      #about .value-card h5 {
+        color: var(--aspen-green-dark);
+        font-weight: 700;
+      }
+
+      /* ── Testimonials ── */
+      #testimonials {
+        background-color: var(--aspen-green-light);
+      }
+      .testimonial-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,.07);
+        height: 100%;
+        position: relative;
+      }
+      .testimonial-card::before {
+        content: '\201C';
+        font-size: 5rem;
+        line-height: 1;
+        color: var(--aspen-yellow);
+        position: absolute;
+        top: .5rem;
+        left: 1.25rem;
+        font-family: Georgia, serif;
+      }
+      .testimonial-card p {
+        padding-top: 2rem;
+        color: #444;
+        font-style: italic;
+      }
+      .testimonial-card .reviewer {
+        font-weight: 700;
+        color: var(--aspen-green-dark);
+        margin-top: 1rem;
+      }
+      .testimonial-card .reviewer span {
+        font-weight: 400;
+        color: #888;
+        font-size: .9rem;
+      }
+      .testimonial-card .stars {
+        color: var(--aspen-yellow);
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        margin-bottom: .25rem;
+      }
+
+      /* ── Contact / CTA ── */
+      #contact {
+        background-color: var(--aspen-green);
+        color: #fff;
+        text-align: center;
+      }
+      #contact h2 {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+      #contact p {
+        opacity: .9;
+        font-size: 1.1rem;
+      }
+
+      /* ── Footer ── */
+      footer {
+        background-color: var(--aspen-green-dark);
+        color: rgba(255,255,255,.75);
+        padding: 2rem 0;
+        font-size: .9rem;
+      }
+      footer a {
+        color: var(--aspen-yellow);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
       }
     </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Aspen Montessori School</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact US</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Meet our teachers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Careers</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
 
-<main>
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
+    <!-- ── Navbar ── -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container">
+        <!-- Replace logo-placeholder.png with your actual logo file -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="logo-placeholder.png" alt="Aspen Montessori School logo" onerror="this.style.display='none'">
+          Aspen Montessori School
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+    </nav>
 
+    <main>
+
+      <!-- ── Hero ── -->
+      <section id="hero">
         <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          <h1>Where Little Minds<br><span>Grow &amp; Thrive</span></h1>
+          <p class="lead">A warm, Montessori-inspired environment in Bothell &amp; Kenmore, WA where children ages 12 months to 5 years discover the joy of learning through play and exploration.</p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="#contact" class="btn btn-aspen">Schedule a Tour</a>
+            <a href="#programs" class="btn btn-outline-aspen">Our Programs</a>
           </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+      </section>
 
+      <!-- ── About ── -->
+      <section id="about">
         <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          <div class="text-center mb-2">
+            <h2 class="section-title">About Aspen Montessori</h2>
+          </div>
+          <hr class="section-divider">
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-7 text-center">
+              <p class="lead text-muted">
+                At Aspen Montessori School, we believe every child is naturally curious and capable. Our teachers guide children to explore at their own pace in a prepared, child-centered environment rooted in Maria Montessori's philosophy.
+              </p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="value-card text-center">
+                <div class="about-icon">🌱</div>
+                <h5>Child-Led Learning</h5>
+                <p class="text-muted mb-0">Children choose their work freely, building independence, focus, and intrinsic motivation from an early age.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="value-card text-center">
+                <div class="about-icon">🤝</div>
+                <h5>Caring Community</h5>
+                <p class="text-muted mb-0">Small class sizes and experienced educators mean every child feels seen, safe, and supported every day.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="value-card text-center">
+                <div class="about-icon">🎨</div>
+                <h5>Hands-On Materials</h5>
+                <p class="text-muted mb-0">Authentic Montessori materials engage all the senses and lay concrete foundations for math, language, and science.</p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- ── Testimonials ── -->
+      <section id="testimonials">
+        <div class="container">
+          <div class="text-center mb-2">
+            <h2 class="section-title">What Parents Say</h2>
+          </div>
+          <hr class="section-divider">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>Our child joined at just 1 year old, and we couldn't be happier with the care provided over the past two years! The environment is incredibly clean, and it's truly remarkable how rarely our child gets sick. The teachers are incredibly patient and caring — treating every child with love and respect. Most importantly, our child is genuinely happy every day. There are so many fun workshops and creative activities that keep them engaged and excited to come back. Highly recommend!</p>
+                <div class="reviewer">Xingyang <span>— Parent</span></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p> We are so glad we found Aspen Montessori. Ms. Wang and her team provide exceptional care for our child, and it’s clear they truly invest in each student’s growth and well-being. The facility is always spotless, and our child rarely gets sick, which gives us great peace of mind. We can also tell how engaging and enriching the environment is from the many creative arts and crafts projects brought home. We highly recommend Aspen Montessori to any family looking for a caring, stimulating, and well-run daycare. </p>
+                <div class="reviewer">Brain <span>— Parents</span></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>We cannot recommend Aspen Montessori School enough! We switched our daughter there when she was 1.5 years old, and she has now been attending for the past 9 months. From the beginning, the transition felt so reassuring for our family. She talks about her teachers and friends at home all the time, and seeing how happy and comfortable she is there gives us so much peace of mind.
+
+Ms. Wang is incredibly warm, patient, and caring. 
+We've also been amazed by how much our daughter has learned and grown since starting there. It feels like she comes home with new skills and experiences every week. We're so grateful to have found this daycare and hope to stay there for as long as possible.  I love how the Montessori approach builds real independence. Our kids set the table, fold laundry, and problem-solve — skills they learned right here at Aspen.</p>
+                <div class="reviewer">Narumi <span>— Parent</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Contact / CTA ── -->
+      <section id="contact">
+        <div class="container">
+          <h2>Ready to Visit?</h2>
+          <p>We'd love to show you around. Schedule a tour and see our classrooms in action.</p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+            <a href="mailto:aspenmontessorischool@gmail.com" class="btn btn-aspen">Email Us</a>
+            <a href="tel:+14253189956" class="btn btn-outline-aspen">425-318-9956</a>
+          </div>
+          <div class="mt-4 d-flex flex-wrap justify-content-center gap-5" style="opacity:.85; font-size:.95rem;">
+            <div>
+              <strong>Bothell Campus</strong><br>
+              📍 Bothell, WA &nbsp;|&nbsp; Mon – Fri, 8:45 am – 4:40 pm
+            </div>
+            <div>
+              <strong>Kenmore Campus</strong><br>
+              📍 Kenmore, WA &nbsp;|&nbsp; To Be Open
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer>
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; 2024 Aspen Montessori School. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+    </footer>
 
-    </button>
-  </div>
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-        <h2>Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
-
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</main>
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
   </body>
 </html>
