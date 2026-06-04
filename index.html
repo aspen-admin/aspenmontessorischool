@@ -26,24 +26,26 @@
 
       /* ── Navbar ── */
       .navbar {
-        background-color: var(--aspen-green) !important;
+        background-color: #fff !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,.1);
       }
       .navbar-brand img {
-        height: 40px;
-        width: auto;
+        height: 100px;
+        width: 100px;
+        object-fit: contain;
         margin-right: 8px;
       }
       .navbar-brand {
         font-weight: 700;
         font-size: 1.2rem;
-        color: #fff !important;
+        color: var(--aspen-green-dark) !important;
       }
       .nav-link {
-        color: rgba(255,255,255,.85) !important;
+        color: var(--aspen-green) !important;
         font-weight: 500;
       }
       .nav-link:hover, .nav-link.active {
-        color: var(--aspen-yellow) !important;
+        color: var(--aspen-yellow-dark) !important;
       }
 
       /* ── Hero ── */
@@ -215,11 +217,10 @@
   <body>
 
     <!-- ── Navbar ── -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
       <div class="container">
-        <!-- Replace logo-placeholder.png with your actual logo file -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="logo-placeholder.png" alt="Aspen Montessori School logo" onerror="this.style.display='none'">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="my-logo.png" alt="Aspen Montessori School logo">
           Aspen Montessori School
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
