@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-Static HTML/CSS website for Aspen Montessori School (Bothell, WA), hosted on GitHub Pages at `www.aspenmontessorischool.com` (configured via `CNAME`). No build step, no package manager, no framework — just HTML, CSS, and vendored Bootstrap 5 assets.
+Static HTML/CSS website for Aspen Montessori School, hosted on GitHub Pages at `www.aspenmontessorischool.com` (configured via `CNAME`). Two campuses: **Bothell** and **Kenmore**, WA. No build step, no package manager, no framework — just HTML, CSS, and vendored Bootstrap 5 assets.
 
 ## How to preview
 
@@ -22,6 +22,8 @@ python -m http.server 8080
 |---|---|
 | `index.html` | Single-page site — all content lives here |
 | `carousel.css` | Custom styles layered on top of Bootstrap |
+| `my-logo.png` | School logo, displayed in navbar at 100×100px |
+| `favicon-32x32.png` | Browser tab favicon |
 | `assets/dist/css/` | Vendored Bootstrap 5 CSS (do not edit) |
 | `assets/dist/js/` | Vendored Bootstrap 5 JS bundle (do not edit) |
 
@@ -29,22 +31,30 @@ python -m http.server 8080
 
 - **Primary green:** `#2D5A3A` (dark variant `#1e3f28`, light tint `#eef4f0`)
 - **Accent yellow:** `#E8A838` (dark variant `#c48a20`)
-- **Logo:** drop your logo file in the project root and update the `<img src="logo-placeholder.png">` in the navbar
+- All colors are defined as CSS variables in `:root` at the top of the `<style>` block — edit there, not inline
+- Logo file: `my-logo.png` in project root
+
+## Contact info
+
+- **Email:** aspenmontessorischool@gmail.com
+- **Phone:** 425-318-9956
+- **Campuses:** Bothell, WA and Kenmore, WA
+- **Hours:** Mon–Fri, 7:30 am – 6:00 pm
 
 ## Page sections (in order)
 
 | Section | id | Notes |
 |---|---|---|
-| Navbar | — | Fixed top, green background, logo + nav links |
+| Navbar | — | White background, logo + school name + nav links |
 | Hero | `#hero` | Gradient green background, tagline, two CTA buttons |
 | About | `#about` | Three value cards (child-led, community, materials) |
-| Programs | `#programs` | Three cards: Toddler (18mo–3yr), Primary (3–6yr), Extended Care |
-| Testimonials | `#testimonials` | Three parent quote cards |
-| Contact/CTA | `#contact` | Green band, email + phone buttons, address line |
+| Testimonials | `#testimonials` | Three parent quote cards with star ratings |
+| Contact/CTA | `#contact` | Green band, email + phone buttons, two campus locations |
 | Footer | — | Copyright, Privacy/Terms links |
 
-## Still needs real content
+## Age range
 
+Serves children **12 months to 5 years**.
 
 ## Deployment
 
