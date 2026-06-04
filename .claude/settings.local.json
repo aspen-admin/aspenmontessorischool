@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/lucashao/CodeHub/PersonalAssistant/**)",
+      "Bash(npm install *)"
+    ]
+  }
+}
