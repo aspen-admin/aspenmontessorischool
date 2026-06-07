@@ -628,6 +628,15 @@ We've also been amazed by how much our daughter has learned and grown since star
     </footer>
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('#navbarCollapse .nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          var collapse = document.getElementById('navbarCollapse');
+          var bsCollapse = bootstrap.Collapse.getInstance(collapse);
+          if (bsCollapse) bsCollapse.hide();
+        });
+      });
+    </script>
 
   </body>
 </html>
