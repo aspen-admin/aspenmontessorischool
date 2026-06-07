@@ -67,6 +67,56 @@
     }
     </script>
 
+    <!-- FAQPage structured data (Google FAQ rich results + AI engines) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What ages does Aspen Montessori School serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aspen Montessori School serves children ages 12 months to 5 years at both the Bothell and Kenmore campuses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are the Aspen Montessori School campuses located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are two campuses: Bothell, WA (Mon–Fri, 8:45 am – 4:45 pm) and Kenmore, WA (Mon–Fri, 7:30 am – 5:30 pm)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Montessori education?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Montessori is a child-centered educational approach developed by Dr. Maria Montessori where children choose their work freely, learn through hands-on materials, and develop independence and intrinsic motivation at their own pace."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Aspen Montessori School currently enrolling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, enrollment is open for both campuses including the new Kenmore Campus. Contact aspenmontessorischool@gmail.com or call 425-318-9956 to schedule a tour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I schedule a tour at Aspen Montessori School?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email aspenmontessorischool@gmail.com or call 425-318-9956 to schedule a tour at either the Bothell or Kenmore campus."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="carousel.css" rel="stylesheet">
@@ -295,6 +345,7 @@
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#enroll">Now Enrolling</a></li>
             <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             <li class="nav-item"><a class="nav-link" href="#careers">Join Our Team</a></li>
           </ul>
@@ -437,6 +488,88 @@
 Ms. Wang is incredibly warm, patient, and caring. 
 We've also been amazed by how much our daughter has learned and grown since starting there. It feels like she comes home with new skills and experiences every week. We're so grateful to have found this daycare and hope to stay there for as long as possible.  I love how the Montessori approach builds real independence. Our kids set the table, fold laundry, and problem-solve — skills they learned right here at Aspen.</p>
                 <div class="reviewer">Narumi <span>— Parent</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FAQ ── -->
+      <section id="faq" style="padding: 64px 0;">
+        <div class="container">
+          <div class="text-center mb-2">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+          <hr class="section-divider">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="accordion" id="faqAccordion">
+
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button rounded fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                      What ages do you serve?
+                    </button>
+                  </h3>
+                  <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                      We serve children ages <strong>12 months to 5 years</strong> across both our Bothell and Kenmore campuses.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed rounded fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                      Where are your campuses?
+                    </button>
+                  </h3>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                      We have two locations — <strong>Bothell, WA</strong> (Mon–Fri, 8:45 am – 4:45 pm) and <strong>Kenmore, WA</strong> (Mon–Fri, 7:30 am – 5:30 pm).
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed rounded fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                      What is Montessori education?
+                    </button>
+                  </h3>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                      Montessori is a child-centered approach developed by Dr. Maria Montessori. Children choose their work freely, learn through hands-on materials, and develop independence, focus, and a genuine love of learning at their own pace.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed rounded fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                      Are you currently enrolling?
+                    </button>
+                  </h3>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                      Yes! Enrollment is open for both campuses, including our <strong>new Kenmore Campus</strong>. Contact us to schedule a tour and learn more.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0 mb-3 rounded shadow-sm">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed rounded fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+                      How do I schedule a tour?
+                    </button>
+                  </h3>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-muted">
+                      Email us at <a href="mailto:aspenmontessorischool@gmail.com" style="color: var(--aspen-green);">aspenmontessorischool@gmail.com</a> or call <a href="tel:+14253189956" style="color: var(--aspen-green);">425-318-9956</a> — we'd love to show you around!
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
