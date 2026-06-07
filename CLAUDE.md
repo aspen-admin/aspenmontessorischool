@@ -87,7 +87,8 @@ python -m http.server 8080
 | Lead Montessori Teacher | Full-Time | Bothell & Kenmore | $20.00–$25.00/hr |
 | Assistant Teacher | Full-Time / Part-Time | Bothell & Kenmore | $18.00–$25.00/hr |
 | Classroom Floater / Substitute | Part-Time | Bothell & Kenmore | — |
-| School Office Administrator | Full-Time | Bothell | — |
+| Campus Director | Full-Time | Kenmore | — |
+| School Office Administrator | Full-Time | Kenmore | — |
 
 Assistant Teacher benefits: Health insurance, 401(k), paid time off, flexible schedule, employee discount.
 
