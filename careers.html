@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Careers | Aspen Montessori School – Bothell &amp; Kenmore, WA</title>
+
+    <!-- Primary SEO -->
+    <meta name="description" content="Join the Aspen Montessori School team! We're hiring passionate Montessori educators and staff at our Bothell and Kenmore, WA campuses. View open positions and apply today.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aspenmontessorischool.com/careers.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aspenmontessorischool.com/careers.html">
+    <meta property="og:title" content="Careers | Aspen Montessori School">
+    <meta property="og:description" content="Join our growing team of Montessori educators in Bothell and Kenmore, WA. View open positions and apply today.">
+    <meta property="og:image" content="https://www.aspenmontessorischool.com/assets/kidsactivities/1_.jpg">
+    <meta property="og:site_name" content="Aspen Montessori School">
+
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+
+    <style>
+      :root {
+        --aspen-green: #2D5A3A;
+        --aspen-green-dark: #1e3f28;
+        --aspen-green-light: #eef4f0;
+        --aspen-yellow: #E8A838;
+        --aspen-yellow-dark: #c48a20;
+      }
+
+      body {
+        padding-top: 72px;
+        color: #333;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+      }
+
+      /* ── Navbar ── */
+      .navbar {
+        background-color: #fff !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      }
+      .navbar-brand img {
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+        margin-right: 8px;
+      }
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--aspen-green-dark) !important;
+      }
+      .nav-link {
+        color: var(--aspen-green) !important;
+        font-weight: 500;
+      }
+      .nav-link:hover, .nav-link.active {
+        color: var(--aspen-yellow-dark) !important;
+      }
+
+      /* ── Buttons ── */
+      .btn-aspen {
+        background-color: var(--aspen-yellow);
+        border-color: var(--aspen-yellow);
+        color: #1a1a1a;
+        font-weight: 700;
+        padding: .75rem 2rem;
+        border-radius: 50px;
+        font-size: 1.05rem;
+        transition: background-color .2s, transform .15s;
+      }
+      .btn-aspen:hover {
+        background-color: var(--aspen-yellow-dark);
+        border-color: var(--aspen-yellow-dark);
+        color: #1a1a1a;
+        transform: translateY(-2px);
+      }
+      .btn-outline-light-aspen {
+        border: 2px solid #fff;
+        color: #fff;
+        font-weight: 600;
+        padding: .75rem 2rem;
+        border-radius: 50px;
+        font-size: 1.05rem;
+        background: transparent;
+        transition: background-color .2s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn-outline-light-aspen:hover {
+        background-color: rgba(255,255,255,.15);
+        color: #fff;
+      }
+
+      /* ── Section shared ── */
+      section {
+        padding: 80px 0;
+      }
+      .section-title {
+        font-weight: 700;
+        color: var(--aspen-green-dark);
+        margin-bottom: .5rem;
+      }
+      .section-divider {
+        width: 60px;
+        height: 4px;
+        background: var(--aspen-yellow);
+        border: none;
+        margin: 0 auto 2.5rem;
+        border-radius: 2px;
+      }
+
+      /* ── Hero ── */
+      #hero {
+        background: linear-gradient(135deg, var(--aspen-green-dark) 0%, var(--aspen-green) 60%, #3d7a50 100%);
+        color: #fff;
+        padding: 100px 0 80px;
+        text-align: center;
+      }
+      #hero h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 800;
+        line-height: 1.15;
+      }
+      #hero h1 span {
+        color: var(--aspen-yellow);
+      }
+      #hero p.lead {
+        font-size: 1.2rem;
+        max-width: 620px;
+        margin: 1.25rem auto 2rem;
+        opacity: .9;
+      }
+
+      /* ── Benefits ── */
+      #benefits {
+        background-color: var(--aspen-green-light);
+      }
+      .benefit-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2rem 1.5rem;
+        height: 100%;
+        border-top: 4px solid var(--aspen-green);
+        box-shadow: 0 2px 12px rgba(0,0,0,.07);
+        text-align: center;
+      }
+      .benefit-card .benefit-icon {
+        font-size: 2.4rem;
+        margin-bottom: .75rem;
+      }
+      .benefit-card h5 {
+        color: var(--aspen-green-dark);
+        font-weight: 700;
+        margin-bottom: .5rem;
+      }
+      .benefit-card p {
+        color: #555;
+        font-size: .95rem;
+        margin: 0;
+      }
+
+      /* ── Open Positions ── */
+      #positions {
+        background-color: #fff;
+      }
+      .position-card {
+        border: 1.5px solid #d8e8dd;
+        border-radius: 12px;
+        padding: 1.75rem;
+        background: #fff;
+        transition: box-shadow .2s, border-color .2s;
+      }
+      .position-card:hover {
+        box-shadow: 0 4px 20px rgba(45,90,58,.12);
+        border-color: var(--aspen-green);
+      }
+      .position-card .badge-type {
+        background-color: var(--aspen-green-light);
+        color: var(--aspen-green-dark);
+        font-weight: 600;
+        font-size: .8rem;
+        padding: .35em .75em;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: .75rem;
+      }
+      .position-card h5 {
+        color: var(--aspen-green-dark);
+        font-weight: 700;
+        margin-bottom: .35rem;
+      }
+      .position-card .campus-tag {
+        font-size: .88rem;
+        color: #777;
+        margin-bottom: .75rem;
+      }
+      .position-card ul {
+        padding-left: 1.25rem;
+        color: #555;
+        font-size: .93rem;
+        margin-bottom: 1.25rem;
+      }
+      .position-card ul li {
+        margin-bottom: .3rem;
+      }
+
+      /* ── Process ── */
+      #process {
+        background-color: var(--aspen-green-light);
+      }
+      .step-circle {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: var(--aspen-green);
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto .75rem;
+        flex-shrink: 0;
+      }
+      .step-card {
+        text-align: center;
+        padding: 1.5rem 1rem;
+      }
+      .step-card h6 {
+        color: var(--aspen-green-dark);
+        font-weight: 700;
+        margin-bottom: .4rem;
+      }
+      .step-card p {
+        color: #555;
+        font-size: .93rem;
+        margin: 0;
+      }
+
+      /* ── CTA ── */
+      #cta {
+        background-color: var(--aspen-green);
+        color: #fff;
+        text-align: center;
+        padding: 72px 0;
+      }
+      #cta h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: .75rem;
+      }
+      #cta p {
+        opacity: .9;
+        font-size: 1.1rem;
+        max-width: 560px;
+        margin: 0 auto 2rem;
+      }
+
+      /* ── Footer ── */
+      footer {
+        background-color: var(--aspen-green-dark);
+        color: rgba(255,255,255,.75);
+        padding: 2rem 0;
+        font-size: .9rem;
+      }
+      footer a {
+        color: var(--aspen-yellow);
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ── Navbar ── -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="my-logo.png" alt="Aspen Montessori School logo">
+          Aspen Montessori
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#enroll">Now Enrolling</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="careers.html">Join Our Team</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- ── Hero ── -->
+      <section id="hero">
+        <div class="container">
+          <h1>Grow With <span>Aspen Montessori</span></h1>
+          <p class="lead">Join a team of dedicated educators who believe in the power of child-led learning. We're hiring at our Bothell and Kenmore campuses.</p>
+          <a href="#positions" class="btn btn-aspen btn-lg px-5 me-2">View Open Positions</a>
+          <a href="#cta" class="btn-outline-light-aspen btn-lg px-4 mt-2 mt-md-0">Contact HR</a>
+        </div>
+      </section>
+
+      <!-- ── Why Join Us ── -->
+      <section id="benefits">
+        <div class="container text-center">
+          <h2 class="section-title">Why Join Aspen?</h2>
+          <hr class="section-divider">
+          <div class="row g-4 justify-content-center">
+            <div class="col-sm-6 col-lg-3">
+              <div class="benefit-card">
+                <div class="benefit-icon">🌱</div>
+                <h5>Meaningful Work</h5>
+                <p>Make a lasting impact on children ages 12 months to 5 years during their most formative years.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="benefit-card">
+                <div class="benefit-icon">🤝</div>
+                <h5>Supportive Team</h5>
+                <p>Work alongside passionate educators in a collaborative, nurturing environment at two campuses.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="benefit-card">
+                <div class="benefit-icon">📚</div>
+                <h5>Professional Growth</h5>
+                <p>Access ongoing Montessori training, workshops, and development opportunities to advance your practice.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="benefit-card">
+                <div class="benefit-icon">⭐</div>
+                <h5>Competitive Benefits</h5>
+                <p>Competitive pay, paid time off, and a warm, inclusive school community you'll be proud to be part of.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Open Positions ── -->
+      <section id="positions">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Open Positions</h2>
+            <hr class="section-divider">
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">We are currently hiring for the following roles. Both campuses are located in the greater Seattle area.</p>
+          </div>
+          <div class="row g-4">
+
+            <!-- Lead Guide -->
+            <div class="col-md-6">
+              <div class="position-card h-100">
+                <span class="badge-type">Full-Time</span>
+                <h5>Lead Montessori Guide</h5>
+                <p class="campus-tag">&#x1F4CD; Bothell Campus &amp; Kenmore Campus</p>
+                <ul>
+                  <li>Deliver authentic Montessori curriculum for toddler and primary classrooms</li>
+                  <li>Observe and document each child's individual learning journey</li>
+                  <li>Communicate regularly with families about progress and milestones</li>
+                  <li>Prepare and maintain a beautiful, organized classroom environment</li>
+                </ul>
+                <p style="font-size:.88rem; color:#666; margin-bottom:1.25rem;"><strong>Requirements:</strong> AMI/AMS Montessori credential (or in progress) preferred; experience with children ages 12 months – 5 years.</p>
+                <a href="mailto:aspenmontessorihr@gmail.com?subject=Application%3A%20Lead%20Montessori%20Guide" class="btn btn-aspen">Apply Now</a>
+              </div>
+            </div>
+
+            <!-- Assistant Guide -->
+            <div class="col-md-6">
+              <div class="position-card h-100">
+                <span class="badge-type">Full-Time / Part-Time</span>
+                <h5>Assistant Montessori Guide</h5>
+                <p class="campus-tag">&#x1F4CD; Bothell Campus &amp; Kenmore Campus</p>
+                <ul>
+                  <li>Support the Lead Guide in daily classroom activities and lessons</li>
+                  <li>Assist in preparing materials and maintaining classroom order</li>
+                  <li>Engage with children in warm, respectful Montessori interactions</li>
+                  <li>Help supervise children during outdoor play and transitions</li>
+                </ul>
+                <p style="font-size:.88rem; color:#666; margin-bottom:1.25rem;"><strong>Requirements:</strong> Passion for early childhood education; Montessori knowledge a plus but not required — training provided.</p>
+                <a href="mailto:aspenmontessorihr@gmail.com?subject=Application%3A%20Assistant%20Montessori%20Guide" class="btn btn-aspen">Apply Now</a>
+              </div>
+            </div>
+
+            <!-- Floater -->
+            <div class="col-md-6">
+              <div class="position-card h-100">
+                <span class="badge-type">Part-Time</span>
+                <h5>Classroom Floater / Substitute</h5>
+                <p class="campus-tag">&#x1F4CD; Bothell Campus &amp; Kenmore Campus</p>
+                <ul>
+                  <li>Provide flexible coverage across classrooms as needed</li>
+                  <li>Build relationships with children and families across both campuses</li>
+                  <li>Great opportunity to explore Montessori education first-hand</li>
+                </ul>
+                <p style="font-size:.88rem; color:#666; margin-bottom:1.25rem;"><strong>Requirements:</strong> Reliable, flexible schedule; experience with young children preferred.</p>
+                <a href="mailto:aspenmontessorihr@gmail.com?subject=Application%3A%20Classroom%20Floater" class="btn btn-aspen">Apply Now</a>
+              </div>
+            </div>
+
+            <!-- Admin -->
+            <div class="col-md-6">
+              <div class="position-card h-100">
+                <span class="badge-type">Full-Time</span>
+                <h5>School Office Administrator</h5>
+                <p class="campus-tag">&#x1F4CD; Bothell Campus</p>
+                <ul>
+                  <li>Greet families and manage front-desk operations with warmth</li>
+                  <li>Handle enrollment inquiries, scheduling, and school communications</li>
+                  <li>Support the school director with administrative tasks</li>
+                  <li>Maintain records and assist with billing and correspondence</li>
+                </ul>
+                <p style="font-size:.88rem; color:#666; margin-bottom:1.25rem;"><strong>Requirements:</strong> Strong organizational and communication skills; experience in an office or school setting preferred.</p>
+                <a href="mailto:aspenmontessorihr@gmail.com?subject=Application%3A%20Office%20Administrator" class="btn btn-aspen">Apply Now</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Application Process ── -->
+      <section id="process">
+        <div class="container text-center">
+          <h2 class="section-title">How to Apply</h2>
+          <hr class="section-divider">
+          <div class="row g-3 justify-content-center">
+            <div class="col-sm-6 col-lg-3">
+              <div class="step-card">
+                <div class="step-circle">1</div>
+                <h6>Send Your Resume</h6>
+                <p>Email your resume and a brief cover letter to <a href="mailto:aspenmontessorihr@gmail.com" style="color:var(--aspen-green);">aspenmontessorihr@gmail.com</a>.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="step-card">
+                <div class="step-circle">2</div>
+                <h6>Initial Call</h6>
+                <p>Our HR team will reach out within 3–5 business days to schedule a brief introductory phone call.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="step-card">
+                <div class="step-circle">3</div>
+                <h6>Campus Visit</h6>
+                <p>Visit one of our campuses, meet the team, and observe a classroom in action.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="step-card">
+                <div class="step-circle">4</div>
+                <h6>Welcome to the Team</h6>
+                <p>Receive an offer and begin onboarding with full Montessori orientation and support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CTA ── -->
+      <section id="cta">
+        <div class="container">
+          <h2>Ready to Make a Difference?</h2>
+          <p>We'd love to hear from you. Reach out to our HR team and take the first step toward a rewarding career in Montessori education.</p>
+          <a href="mailto:aspenmontessorihr@gmail.com" class="btn btn-aspen btn-lg px-5">Email Our HR Team</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer>
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0">&copy; 2026 Aspen Montessori School. All rights reserved.</p>
+        <div class="d-flex gap-3">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('#navbarCollapse .nav-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          var collapse = document.getElementById('navbarCollapse');
+          var bsCollapse = bootstrap.Collapse.getInstance(collapse);
+          if (bsCollapse) bsCollapse.hide();
+        });
+      });
+    </script>
+
+  </body>
+</html>
