@@ -22,7 +22,7 @@ python -m http.server 8080
 |---|---|
 | `index.html` | Single-page site — all content lives here |
 | `carousel.css` | Custom styles layered on top of Bootstrap |
-| `my-logo.png` | School logo, displayed in navbar at 100×100px |
+| `my-logo.png` | School logo, displayed in navbar at 80×80px |
 | `favicon-32x32.png` | Browser tab favicon |
 | `assets/dist/css/` | Vendored Bootstrap 5 CSS (do not edit) |
 | `assets/dist/js/` | Vendored Bootstrap 5 JS bundle (do not edit) |
@@ -48,8 +48,10 @@ python -m http.server 8080
 | Navbar | — | White background, logo + school name + nav links |
 | Hero | `#hero` | Gradient green background, tagline, two CTA buttons |
 | About | `#about` | Three value cards (child-led, community, materials) |
+| Now Enrolling | `#enroll` | Yellow band announcing Kenmore Campus enrollment; "Schedule a Tour" button links to `#contact` |
 | Testimonials | `#testimonials` | Three parent quote cards with star ratings |
 | Contact/CTA | `#contact` | Green band, email + phone buttons, two campus locations |
+| Join Our Team | `#careers` | Light green band; hiring copy + email button → aspenmontessorihr@gmail.com |
 | Footer | — | Copyright, Privacy/Terms links |
 
 ## Age range
