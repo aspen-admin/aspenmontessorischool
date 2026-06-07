@@ -57,10 +57,10 @@ python -m http.server 8080
 
 | Section | id | Notes |
 |---|---|---|
-| Navbar | — | White background, logo + school name + nav links; "Join Our Team" links to `careers.html` |
-| Hero | `#hero` | Gradient green background, tagline, two CTA buttons |
-| About | `#about` | Three value cards (child-led, community, materials) |
-| Now Enrolling | `#enroll` | Yellow band announcing Kenmore Campus enrollment; "Schedule a Tour" button links to `#contact` |
+| Navbar | — | White background, logo (links to `#`) + school name + nav links; no "Home" item — logo serves that role; "Join Our Team" links to `careers.html` |
+| Now Enrolling | `#enroll` | First section — full-width yellow band announcing Kenmore Campus enrollment; "Schedule a Tour" button links to `#contact` |
+| Hero | `#hero` | Gradient green background, tagline, CTA button |
+| About | `#about` | Kids activity carousel + three value cards (child-led, community, materials) |
 | Testimonials | `#testimonials` | Three parent quote cards with star ratings |
 | FAQ | `#faq` | Accordion — ages, campuses, hours, Montessori philosophy, enrollment, touring |
 | Contact/CTA | `#contact` | Green band, email + phone buttons, two campus locations |
