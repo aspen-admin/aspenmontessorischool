@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/lucashao/CodeHub/PersonalAssistant/**)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(git remote *)"
     ]
   }
 }
