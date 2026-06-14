@@ -28,12 +28,19 @@ python -m http.server 8080
 | `favicon-32x32.png` | Browser tab favicon |
 | `assets/dist/css/` | Vendored Bootstrap 5 CSS (do not edit) |
 | `assets/dist/js/` | Vendored Bootstrap 5 JS bundle (do not edit) |
+| `assets/kidsactivities/` | Carousel photos used in the About section (`1_.jpg` … `4_.jpg`) |
+| `robots.txt` | SEO crawler directives |
+| `CNAME` | GitHub Pages custom domain — do not delete |
+
+## Styles
+
+Each HTML page embeds its own `<style>` block in `<head>` — that is where brand colors, layout tweaks, and component overrides live. `carousel.css` is the only external stylesheet and covers only carousel-specific rules. Edit per-page `<style>` blocks for anything else; do not add new external CSS files.
 
 ## Brand
 
 - **Primary green:** `#2D5A3A` (dark variant `#1e3f28`, light tint `#eef4f0`)
 - **Accent yellow:** `#E8A838` (dark variant `#c48a20`)
-- All colors are defined as CSS variables in `:root` at the top of the `<style>` block — edit there, not inline
+- All colors are defined as CSS variables in `:root` at the top of each page's `<style>` block — edit there, not inline
 - Logo file: `my-logo.png` in project root
 
 ## Contact info
@@ -98,7 +105,7 @@ Serves children **12 months to 5 years**.
 
 ## Deployment
 
-Pushing to `main` triggers GitHub Pages deployment automatically (see `.github/workflows/`). The custom domain is set via `CNAME` — do not delete that file.
+Pushing to `main` triggers GitHub Pages deployment automatically via GitHub's built-in Pages feature. The `.github/workflows/` files are GitHub Skills tutorial workflows and are unrelated to deployment. The custom domain is set via `CNAME` — do not delete that file.
 
 ---
 
