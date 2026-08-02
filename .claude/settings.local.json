@@ -3,7 +3,9 @@
     "allow": [
       "Read(//c/Users/lucashao/CodeHub/PersonalAssistant/**)",
       "Bash(npm install *)",
-      "Bash(git remote *)"
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
