@@ -22,7 +22,9 @@ python -m http.server 8080
 |---|---|
 | `index.html` | Main single-page site — all enrollment/about/contact content |
 | `careers.html` | Dedicated careers page — open positions, benefits, FAQ, application process |
+| `schedule-tour.html` | Tour booking page — embeds the Calendly widget (`calendly.com/aspenmontessorischool/aspen-montessori-tour`) |
 | `llms.txt` | Plain-text site summary for AI/LLM crawlers — keep in sync with any content changes |
+| `sitemap.xml` | XML sitemap referenced by `robots.txt` — add an entry whenever a new page is added |
 | `carousel.css` | Custom styles layered on top of Bootstrap |
 | `my-logo.png` | School logo, displayed in navbar at 80×80px |
 | `favicon-32x32.png` | Browser tab favicon |
@@ -64,13 +66,13 @@ Each HTML page embeds its own `<style>` block in `<head>` — that is where bran
 
 | Section | id | Notes |
 |---|---|---|
-| Navbar | — | White background, logo (links to `#`) + school name + nav links; no "Home" item — logo serves that role; "Join Our Team" links to `careers.html` |
-| Now Enrolling | `#enroll` | First section — full-width yellow band announcing Kenmore Campus enrollment; "Schedule a Tour" button links to `#contact` |
-| Hero | `#hero` | Gradient green background, tagline, CTA button |
+| Navbar | — | White background, logo (links to `#`) + school name + nav links; no "Home" item — logo serves that role; "Schedule a Tour" links to `schedule-tour.html`; "Join Our Team" links to `careers.html` |
+| Now Enrolling | `#enroll` | First section — full-width yellow band announcing Kenmore Campus enrollment for 2027–2028 |
+| Hero | `#hero` | Gradient green background, tagline, "Schedule a Tour" button → `schedule-tour.html` |
 | About | `#about` | Kids activity carousel + three value cards (child-led, community, materials) |
 | Testimonials | `#testimonials` | Three parent quote cards with star ratings |
 | FAQ | `#faq` | Accordion — ages, campuses, hours, Montessori philosophy, enrollment, touring |
-| Contact/CTA | `#contact` | Green band, email + phone buttons, two campus locations |
+| Contact/CTA | `#contact` | Green band, "Schedule a Tour" + email + phone buttons, two campus locations |
 | Join Our Team | `#careers` | Light green teaser band; "View Open Positions" button → `careers.html`; email HR button |
 | Footer | — | Copyright, Privacy/Terms links |
 
@@ -78,13 +80,22 @@ Each HTML page embeds its own `<style>` block in `<head>` — that is where bran
 
 | Section | id | Notes |
 |---|---|---|
-| Navbar | — | Same as index; "Join Our Team" marked active |
+| Navbar | — | Same as index, plus "Schedule a Tour" link; "Join Our Team" marked active |
 | Hero | `#hero` | Green gradient, tagline, "View Open Positions" + "Contact HR" CTAs |
-| Open Positions | `#positions` | Four job cards: Lead Montessori Teacher, Assistant Teacher, Floater, Office Admin |
-| Why Join Aspen | `#benefits` | Four benefit cards: Meaningful Work, Supportive Team, Professional Growth, Competitive Benefits |
+| Open Positions | `#positions` | Four job cards: Lead Montessori Teacher, Assistant Teacher, Classroom Floater/Substitute, Campus Director |
 | How to Apply | `#process` | Four numbered steps: Resume → Call → Campus Visit → Welcome |
-| FAQ | `#faq` | Accordion — hiring status, certification, pay, benefits, how to apply |
+| FAQ | `#faq` | Accordion — hiring status, certification, how to apply |
 | CTA | `#cta` | Green band, "Email Our HR Team" button |
+| Footer | — | Same as index |
+
+### schedule-tour.html (in order)
+
+| Section | id | Notes |
+|---|---|---|
+| Navbar | — | Same as index, plus "Schedule a Tour" marked active |
+| Hero | `#hero` | Green gradient, tagline |
+| Booking | `#booking` | Embedded Calendly inline widget (`calendly.com/aspenmontessorischool/aspen-montessori-tour`) |
+| Campuses | `#campuses` | Two campus cards with address links + hours, fallback email/phone |
 | Footer | — | Same as index |
 
 ## Open positions (careers.html)
@@ -95,7 +106,6 @@ Each HTML page embeds its own `<style>` block in `<head>` — that is where bran
 | Assistant Teacher | Full-Time / Part-Time | Bothell & Kenmore | $18.00–$25.00/hr |
 | Classroom Floater / Substitute | Part-Time | Bothell & Kenmore | — |
 | Campus Director | Full-Time | Kenmore | — |
-| School Office Administrator | Full-Time | Kenmore | — |
 
 Assistant Teacher benefits: Health insurance, 401(k), paid time off, flexible schedule, employee discount.
 
